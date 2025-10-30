@@ -6,7 +6,7 @@ import "./styles.css";
 const App = () => {
   const [cart, setCart] = useState([]);
 
-  // ✅ Add item to cart
+  
   const handleCartUpdate = (updateFn) => {
     setCart((prevCart) => {
       const updatedCart = typeof updateFn === "function" ? updateFn(prevCart) : updateFn;
@@ -27,3 +27,4 @@ const App = () => {
 };
 
 export default App;
+
