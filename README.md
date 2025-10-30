@@ -59,4 +59,4 @@ Opens at 👉 http://localhost:5173
 👨‍💻 Author
 
 Mohammed Sohail
-📧 [Your Email or GitHub Profile Link]
+mohdsohail96638@gmail.com
