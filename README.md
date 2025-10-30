@@ -79,21 +79,6 @@ npm run dev
 
 Frontend runs on: http://localhost:5173
 
-🎥 Demo Video Steps (for submission)
-
-Open VS Code showing both frontend and backend folders.
-
-Start both servers (npm run dev and node server.js).
-
-Show products loading from FakeStore API.
-
-Add and remove a few items from the cart.
-
-Checkout → show the receipt popup.
-
-Stop backend → refresh → show that products still load (FakeStore API).
-
-End with a short message like “Thanks for watching!” 😄
 
 💡 Bonus Features (Implemented)
 
