@@ -9,7 +9,7 @@ const CartPage = ({ cart, setCart }) => {
 
   return (
     <div className="cart-section">
-      <h2>🛒 Cart</h2>
+      <h2> Cart</h2>
 
       {cart.length === 0 ? (
         <p>No items in cart.</p>
@@ -31,7 +31,7 @@ const CartPage = ({ cart, setCart }) => {
                   <td>{item.qty}</td>
                   <td>₹{item.price}</td>
                   <td>
-                    <button onClick={() => handleRemove(item.id)}>❌</button>
+                    <button onClick={() => handleRemove(item.id)}></button>
                   </td>
                 </tr>
               ))}
@@ -53,3 +53,4 @@ const CartPage = ({ cart, setCart }) => {
 };
 
 export default CartPage;
+
