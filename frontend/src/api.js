@@ -1,7 +1,5 @@
-// src/api.js
 import axios from "axios";
 
-// Base URL of Fake Store API
 const API_BASE = "https://fakestoreapi.com";
 
 export async function getProducts() {
@@ -10,10 +8,10 @@ export async function getProducts() {
     return res.data.map((item) => ({
       id: item.id,
       name: item.title,
-      price: Math.round(item.price * 80), // convert USD → INR (approx)
+      price: Math.round(item.price * 80), 
     }));
   } catch (err) {
-    alert("⚠️ Could not load products from API. Showing fallback data.");
+    alert(" Could not load products from API. Showing fallback data.");
     return [
       { id: 1, name: "Wireless Mouse", price: 599 },
       { id: 2, name: "Bluetooth Keyboard", price: 999 },
@@ -48,3 +46,4 @@ export async function checkout(cartItems) {
   const res = await axios.post("http://localhost:5000/api/checkout", { cartItems });
   return res.data;
 }
+
