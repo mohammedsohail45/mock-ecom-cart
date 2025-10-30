@@ -4,12 +4,11 @@ import "./styles.css";
 const Products = ({ onCartUpdate }) => {
   const [products, setProducts] = useState([]);
 
-  // ✅ Fetch products from Fake Store API
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => {
-        // Convert to INR and clean up for display
+        
         const formatted = data.map((p) => ({
           id: p.id,
           name: p.title.length > 40 ? p.title.slice(0, 40) + "..." : p.title,
@@ -25,7 +24,7 @@ const Products = ({ onCartUpdate }) => {
       });
   }, []);
 
-  // ✅ Add item to cart
+
   const handleAddToCart = (product) => {
     onCartUpdate((prev) => {
       const existing = prev.find((item) => item.id === product.id);
@@ -41,7 +40,7 @@ const Products = ({ onCartUpdate }) => {
 
   return (
     <div className="products-section">
-      <h2>🛍️ Products</h2>
+      <h2> Products</h2>
 
       <div className="product-grid">
         {products.length === 0 ? (
@@ -58,7 +57,7 @@ const Products = ({ onCartUpdate }) => {
               <p className="category">{product.category}</p>
               <p className="price">₹{product.price}</p>
               <button onClick={() => handleAddToCart(product)}>
-                🛒 Add to Cart
+                 Add to Cart
               </button>
             </div>
           ))
@@ -69,3 +68,4 @@ const Products = ({ onCartUpdate }) => {
 };
 
 export default Products;
+
